@@ -9,21 +9,19 @@
 <link rel="manifest" href="manifest.webmanifest">
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#101827;color:#fff;font-family:Arial,sans-serif}
+body{margin:0;background:#101827;color:white;font-family:Arial,sans-serif}
 header{padding:25px 18px;background:linear-gradient(135deg,#172554,#075985)}
 h1{margin:0;font-size:28px}
 header p{color:#dbeafe}
 nav{display:flex;gap:10px;overflow:auto;padding:12px;background:#172033}
 nav a{color:white;text-decoration:none;background:#26354c;padding:10px 14px;border-radius:20px;white-space:nowrap}
 main{padding:16px;max-width:750px;margin:auto}
-.welcome{background:#1e293b;padding:20px;border-radius:15px;margin-bottom:18px}
+.card,.welcome{background:#1e293b;padding:18px;border-radius:15px;margin:15px 0}
 h2{color:#38bdf8}
-.card{background:#1e293b;padding:18px;border-radius:15px;margin:15px 0}
-.card p{color:#cbd5e1;line-height:1.6}
-button{background:#0ea5e9;color:white;border:0;border-radius:9px;padding:12px 18px;font-size:16px}
-button:active{background:#0284c7}
-footer{text-align:center;padding:25px;color:#94a3b8}
+p{line-height:1.6;color:#cbd5e1}
+button{background:#0ea5e9;color:white;border:0;border-radius:9px;padding:12px;margin:4px;font-size:16px}
 a{color:#38bdf8}
+footer{text-align:center;padding:25px;color:#94a3b8}
 </style>
 </head>
 <body>
@@ -48,17 +46,17 @@ a{color:#38bdf8}
 
 <section class="card" id="news">
 <h2>📰 Latest News</h2>
-<p>यहाँ जल्द ही नई और उपयोगी खबरें प्रकाशित की जाएँगी।</p>
+<p>यहाँ नई और उपयोगी खबरें प्रकाशित की जाएँगी।</p>
 </section>
 
 <section class="card" id="videos">
 <h2>🎬 Videos</h2>
-<p>यहाँ उपयोगी और जानकारीपूर्ण वीडियो जोड़े जाएँगे।</p>
+<p>यहाँ जानकारीपूर्ण वीडियो जोड़े जाएँगे।</p>
 </section>
 
 <section class="card" id="quiz">
 <h2>🧠 Daily Quiz</h2>
-<p id="question">भारत की राजधानी क्या है?</p>
+<p>भारत की राजधानी क्या है?</p>
 <button onclick="answer('Delhi')">दिल्ली</button>
 <button onclick="answer('Mumbai')">मुंबई</button>
 <button onclick="answer('Patna')">पटना</button>
@@ -67,29 +65,35 @@ a{color:#38bdf8}
 
 <section class="card" id="offers">
 <h2>🎁 Daily Offers</h2>
-<p>यहाँ उपयोगी ऑफर और डील की जानकारी दी जाएगी।</p>
+<p>यहाँ उपयोगी ऑफर और डील की जानकारी मिलेगी।</p>
 </section>
 
 <section class="card" id="knowledge">
 <h2>📚 Knowledge</h2>
-<p>यहाँ सामान्य ज्ञान, शिक्षा और तकनीक से जुड़ी जानकारी मिलेगी।</p>
+<p>यहाँ सामान्य ज्ञान, शिक्षा और तकनीक की जानकारी मिलेगी।</p>
 </section>
 
 <section class="card">
-<h2>📞 Contact Us</h2>
-<p>सुझाव या जानकारी के लिए ईमेल करें:</p>
-<a href="mailto:sharma19889@gmail.com">sharma19889@gmail.com</a>
+<h2>📞 Contact</h2>
+<p>Email: <a href="mailto:sharma19889@gmail.com">sharma19889@gmail.com</a></p>
+</section>
+
+<section class="card">
+<h2>Useful Links</h2>
+<p><a href="about.html">About Us</a></p>
+<p><a href="privacy.html">Privacy Policy</a></p>
+<p><a href="disclaimer.html">Disclaimer</a></p>
+<p><a href="contact.html">Contact Us</a></p>
 </section>
 </main>
 
 <footer>
 <p>© 2026 Gaurav Earning. All Rights Reserved.</p>
-<p>यह वेबसाइट जानकारी और शिक्षा के उद्देश्य से है।</p>
 </footer>
 
 <script>
 function answer(value){
-let result=document.getElementById("result");
+const result=document.getElementById("result");
 if(value==="Delhi"){
 result.textContent="🎉 सही जवाब! बहुत अच्छे!";
 result.style.color="#4ade80";
