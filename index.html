@@ -3,109 +3,163 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101827">
-<title>Gaurav Earning</title>
+<title>Gaurav Earning | Learn & Grow</title>
+<meta name="description" content="Gaurav Earning - News, knowledge, articles, quiz and useful information in Hindi and English.">
 <link rel="manifest" href="manifest.webmanifest">
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#101827;color:white;font-family:Arial,sans-serif}
-header{padding:25px 18px;background:linear-gradient(135deg,#172554,#075985)}
-h1{margin:0;font-size:28px}
+body{margin:0;background:#0f172a;color:#f8fafc;font-family:Arial,sans-serif}
+header{padding:25px 18px;background:linear-gradient(135deg,#172554,#0369a1)}
+header h1{font-size:29px;margin:0}
 header p{color:#dbeafe}
-nav{display:flex;gap:10px;overflow:auto;padding:12px;background:#172033}
-nav a{color:white;text-decoration:none;background:#26354c;padding:10px 14px;border-radius:20px;white-space:nowrap}
-main{padding:16px;max-width:750px;margin:auto}
-.card,.welcome{background:#1e293b;padding:18px;border-radius:15px;margin:15px 0}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+button{border:0;border-radius:9px;padding:11px 15px;background:#0ea5e9;color:white;font-weight:bold;cursor:pointer}
+nav{display:flex;gap:9px;overflow-x:auto;padding:13px;background:#172033}
+nav a{white-space:nowrap;text-decoration:none;color:white;background:#26354c;padding:10px 13px;border-radius:20px}
+main{max-width:800px;margin:auto;padding:15px}
+.hero,.card{background:#1e293b;border-radius:15px;padding:19px;margin:15px 0}
+.hero{background:linear-gradient(135deg,#1e3a8a,#164e63)}
 h2{color:#38bdf8}
-p{line-height:1.6;color:#cbd5e1}
-button{background:#0ea5e9;color:white;border:0;border-radius:9px;padding:12px;margin:4px;font-size:16px}
-a{color:#38bdf8}
-footer{text-align:center;padding:25px;color:#94a3b8}
+p{line-height:1.65;color:#d1d5db}
+.article{display:block;padding:14px;margin-top:12px;background:#26354c;border-radius:10px;text-decoration:none;color:#7dd3fc}
+.links a{display:inline-block;margin:7px 10px 7px 0;color:#7dd3fc}
+footer{text-align:center;padding:25px;background:#111827;color:#94a3b8}
+#result{font-weight:bold}
 </style>
 </head>
 <body>
+
 <header>
+<div class="top">
 <h1>💰 Gaurav Earning</h1>
-<p>Knowledge • News • Videos • Quiz • Offers</p>
+<button onclick="toggleLanguage()" id="langButton">English</button>
+</div>
+<p id="tagline">सीखें, जानें और आगे बढ़ें | Learn, Explore & Grow</p>
 </header>
 
 <nav>
-<a href="#news">News</a>
-<a href="#videos">Videos</a>
-<a href="#quiz">Quiz</a>
-<a href="#offers">Offers</a>
-<a href="#knowledge">Knowledge</a>
+<a href="#news" data-hi="न्यूज़" data-en="News">न्यूज़</a>
+<a href="#articles" data-hi="आर्टिकल" data-en="Articles">आर्टिकल</a>
+<a href="#quiz" data-hi="क्विज़" data-en="Quiz">क्विज़</a>
+<a href="#videos" data-hi="वीडियो" data-en="Videos">वीडियो</a>
+<a href="#offers" data-hi="ऑफर" data-en="Offers">ऑफर</a>
+<a href="#knowledge" data-hi="ज्ञान" data-en="Knowledge">ज्ञान</a>
 </nav>
 
 <main>
-<div class="welcome">
-<h2>आपका स्वागत है!</h2>
-<p>Gaurav Earning पर रोज नई जानकारी, मनोरंजन और सीखने का मौका मिलेगा।</p>
-</div>
-
-<section class="card" id="news">
-<h2>📰 Latest News</h2>
-<p>यहाँ नई और उपयोगी खबरें प्रकाशित की जाएँगी।</p>
+<section class="hero">
+<h2 data-hi="आपका स्वागत है!" data-en="Welcome to Gaurav Earning!">आपका स्वागत है!</h2>
+<p data-hi="यहाँ आपको उपयोगी जानकारी, शिक्षा, सामान्य ज्ञान और नए आर्टिकल मिलेंगे।"
+data-en="Find useful information, education, general knowledge and new articles here.">
+यहाँ आपको उपयोगी जानकारी, शिक्षा, सामान्य ज्ञान और नए आर्टिकल मिलेंगे।
+</p>
 </section>
 
-<section class="card" id="videos">
-<h2>🎬 Videos</h2>
-<p>यहाँ जानकारीपूर्ण वीडियो जोड़े जाएँगे।</p>
+<section class="card" id="news">
+<h2 data-hi="📰 ताज़ा जानकारी" data-en="📰 Latest News">📰 ताज़ा जानकारी</h2>
+<p data-hi="यहाँ जल्द ही नई और सत्यापित खबरें प्रकाशित की जाएँगी।"
+data-en="New and verified news updates will be published here.">
+यहाँ जल्द ही नई और सत्यापित खबरें प्रकाशित की जाएँगी।
+</p>
+</section>
+
+<section class="card" id="articles">
+<h2 data-hi="📖 हमारे आर्टिकल" data-en="📖 Latest Articles">📖 हमारे आर्टिकल</h2>
+<p data-hi="मोबाइल से ऑनलाइन पैसे कमाने के 5 सही तरीके"
+data-en="5 Practical Ways to Earn Money Online Using Your Mobile">
+मोबाइल से ऑनलाइन पैसे कमाने के 5 सही तरीके
+</p>
+<a class="article" href="online-earning.html"
+data-hi="पूरा आर्टिकल पढ़ें →"
+data-en="Read Full Article →">पूरा आर्टिकल पढ़ें →</a>
 </section>
 
 <section class="card" id="quiz">
-<h2>🧠 Daily Quiz</h2>
-<p>भारत की राजधानी क्या है?</p>
-<button onclick="answer('Delhi')">दिल्ली</button>
-<button onclick="answer('Mumbai')">मुंबई</button>
-<button onclick="answer('Patna')">पटना</button>
-<p id="result"></p>
+<h2 data-hi="🧠 आज का क्विज़" data-en="🧠 Daily Quiz">🧠 आज का क्विज़</h2>
+<p id="question" data-hi="भारत की राजधानी क्या है?" data-en="What is the capital of India?">भारत की राजधानी क्या है?</p>
+<button onclick="answer('Delhi')" data-hi="दिल्ली" data-en="Delhi">दिल्ली</button>
+<button onclick="answer('Mumbai')" data-hi="मुंबई" data-en="Mumbai">मुंबई</button>
+<button onclick="answer('Patna')" data-hi="पटना" data-en="Patna">पटना</button>
+<p id="result" aria-live="polite"></p>
+</section>
+
+<section class="card" id="videos">
+<h2 data-hi="🎬 वीडियो" data-en="🎬 Videos">🎬 वीडियो</h2>
+<p data-hi="यहाँ उपयोगी और जानकारीपूर्ण वीडियो जोड़े जाएँगे।"
+data-en="Useful and informative videos will be added here.">
+यहाँ उपयोगी और जानकारीपूर्ण वीडियो जोड़े जाएँगे।
+</p>
 </section>
 
 <section class="card" id="offers">
-<h2>🎁 Daily Offers</h2>
-<p>यहाँ उपयोगी ऑफर और डील की जानकारी मिलेगी।</p>
+<h2 data-hi="🎁 आज के ऑफर" data-en="🎁 Daily Offers">🎁 आज के ऑफर</h2>
+<p data-hi="यहाँ उपयोगी ऑफर और डील की जानकारी मिलेगी। खरीदने से पहले ऑफर की शर्तें जाँचें।"
+data-en="Find useful deals and offers here. Check offer terms before purchasing.">
+यहाँ उपयोगी ऑफर और डील की जानकारी मिलेगी। खरीदने से पहले ऑफर की शर्तें जाँचें।
+</p>
 </section>
 
 <section class="card" id="knowledge">
-<h2>📚 Knowledge</h2>
-<p>यहाँ सामान्य ज्ञान, शिक्षा और तकनीक की जानकारी मिलेगी।</p>
+<h2 data-hi="📚 ज्ञान और शिक्षा" data-en="📚 Knowledge & Education">📚 ज्ञान और शिक्षा</h2>
+<p data-hi="सामान्य ज्ञान, शिक्षा और टेक्नोलॉजी से जुड़ी जानकारी।"
+data-en="Information about general knowledge, education and technology.">
+सामान्य ज्ञान, शिक्षा और टेक्नोलॉजी से जुड़ी जानकारी।
+</p>
 </section>
 
 <section class="card">
-<h2>📞 Contact</h2>
+<h2 data-hi="📞 संपर्क करें" data-en="📞 Contact Us">📞 संपर्क करें</h2>
 <p>Email: <a href="mailto:sharma19889@gmail.com">sharma19889@gmail.com</a></p>
 </section>
 
-<section class="card">
-<h2>Useful Links</h2>
-<p><a href="about.html">About Us</a></p>
-<p><a href="privacy.html">Privacy Policy</a></p>
-<p><a href="disclaimer.html">Disclaimer</a></p>
-<p><a href="contact.html">Contact Us</a></p>
+<section class="card links">
+<h2 data-hi="महत्वपूर्ण लिंक" data-en="Important Links">महत्वपूर्ण लिंक</h2>
+<a href="about.html">About Us</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="disclaimer.html">Disclaimer</a>
+<a href="contact.html">Contact Us</a>
 </section>
 </main>
 
 <footer>
 <p>© 2026 Gaurav Earning. All Rights Reserved.</p>
+<p>Learn • Explore • Grow</p>
 </footer>
 
 <script>
+let language="hi";
+
+function toggleLanguage(){
+ language=language==="hi"?"en":"hi";
+ document.documentElement.lang=language;
+ document.getElementById("langButton").textContent=
+ language==="hi"?"English":"हिंदी";
+
+ document.querySelectorAll("[data-hi][data-en]").forEach(el=>{
+   el.textContent=el.getAttribute("data-"+language);
+ });
+ document.getElementById("tagline").textContent=
+ language==="hi"?"सीखें, जानें और आगे बढ़ें | Learn, Explore & Grow":"Learn, Explore & Grow";
+ document.getElementById("result").textContent="";
+}
+
 function answer(value){
-const result=document.getElementById("result");
-if(value==="Delhi"){
-result.textContent="🎉 सही जवाब! बहुत अच्छे!";
-result.style.color="#4ade80";
-}else{
-result.textContent="❌ गलत जवाब। फिर कोशिश करें!";
-result.style.color="#f87171";
+ const result=document.getElementById("result");
+ if(value==="Delhi"){
+  result.textContent=language==="hi"?"🎉 सही जवाब! बहुत अच्छे!":"🎉 Correct Answer! Well done!";
+  result.style.color="#4ade80";
+ }else{
+  result.textContent=language==="hi"?"❌ गलत जवाब। फिर कोशिश करें!":"❌ Incorrect. Try again!";
+  result.style.color="#f87171";
+ }
 }
-}
+
 if("serviceWorker" in navigator){
-window.addEventListener("load",()=>{
-navigator.serviceWorker.register("./sw.js").catch(()=>{});
-});
+ window.addEventListener("load",()=>{
+  navigator.serviceWorker.register("./sw.js").catch(()=>{});
+ });
 }
 </script>
 </body>
